@@ -765,11 +765,6 @@
 
 
 
-
-
-
-
-
         {{-- @if ($benefit->isEmpty())
         @else
             <section>
@@ -1325,41 +1320,41 @@
 
         });
 
-        var swiper = new Swiper(".carruseltop", {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            loop: true,
-            grabCursor: true,
-            centeredSlides: false,
-            initialSlide: 0,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination-carruseltop",
-                clickable: true,
-            },
+            var swiper = new Swiper(".carruseltop", {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                loop: true,
+                grabCursor: true,
+                centeredSlides: false,
+                initialSlide: 0,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination-carruseltop",
+                    clickable: true,
+                },
 
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    650: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    1350: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
                 },
-                650: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                1350: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                },
-            },
-        });
+            });
     </script>
     <script>
         // Obtener información del navegador y del sistema operativo

@@ -102,7 +102,41 @@
                         <h2 class="text-[#052F4E] text-base font-galano_regular font-semibold mt-1">11 de enero del 2024</h2>
                     </div>
                 </div>
-                {{-- <div class="md:basis-5/6 flex flex-col gap-10">
+               
+
+            </div>
+        </section>
+
+        <section>
+            <div class="flex flex-col gap-10 lg:gap-14 w-full px-0 md:pl-[5%]  bg-[#EBEDEF] mt-10 md:mt-20">
+
+                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="flex flex-col gap-1 md:col-span-2 pt-10  md:py-16 px-[5%] md:px-0">
+                        
+                        <h2 class="text-[#052F4E] text-4xl md:text-5xl font-galano_bold leading-none">Suscríbete a nuestra newsletter</h2>
+                        <p class="text-[#052F4E] text-lg font-galano_regular line-clamp-3">
+                            Mauris euismod vehicula eros egestas venenatis. Vestibulum non pulvinar risus. 
+                            Praesent hendrerit lectus ultrices purus consectetur, eu sollicitudin libero pretium.
+                        </p>
+                        <div class="flex flex-col md:flex-row gap-3 mt-10">
+                            <input class="rounded-xl text-base font-galano_regular w-[250px]"  placeholder="Ingresa tu correo electronico"  />
+                            <a class="bg-[#052F4E] text-white px-6 py-2 rounded-xl font-galano_regular w-32"> Inscribirse </a>
+                        </div>
+                        <h2 class="text-[#052F4E] text-sm font-galano_regular mt-1">Al hacer clic en Inscribirse, confirma que acepta nuestros Términos y condiciones.</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-1 md:col-span-1">
+                        <img class="w-full min-h-[320px] h-full object-center object-cover" src="{{asset('images/imagen/heladosubscription.png')}}" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+     {{-- <div class="md:basis-5/6 flex flex-col gap-10">
                     @if (is_null($lastpost))
                     @else
                         <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-duration="150">
@@ -184,38 +218,6 @@
 
 
                 </div> --}}
-
-            </div>
-        </section>
-
-        <section>
-            <div class="flex flex-col gap-10 lg:gap-14 w-full px-0 md:pl-[5%]  bg-[#EBEDEF] mt-10 md:mt-20">
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div class="flex flex-col gap-1 md:col-span-2 pt-10  md:py-16 px-[5%] md:px-0">
-                        
-                        <h2 class="text-[#052F4E] text-4xl md:text-5xl font-galano_bold leading-none">Suscríbete a nuestra newsletter</h2>
-                        <p class="text-[#052F4E] text-lg font-galano_regular line-clamp-3">
-                            Mauris euismod vehicula eros egestas venenatis. Vestibulum non pulvinar risus. 
-                            Praesent hendrerit lectus ultrices purus consectetur, eu sollicitudin libero pretium.
-                        </p>
-                        <div class="flex flex-col md:flex-row gap-3 mt-10">
-                            <input class="rounded-xl text-base font-galano_regular w-[250px]"  placeholder="Ingresa tu correo electronico"  />
-                            <a class="bg-[#052F4E] text-white px-6 py-2 rounded-xl font-galano_regular w-32"> Inscribirse </a>
-                        </div>
-                        <h2 class="text-[#052F4E] text-sm font-galano_regular mt-1">Al hacer clic en Inscribirse, confirma que acepta nuestros Términos y condiciones.</h2>
-                    </div>
-
-                    <div class="flex flex-col gap-1 md:col-span-1">
-                        <img class="w-full min-h-[320px] h-full object-center object-cover" src="{{asset('images/imagen/heladosubscription.png')}}" />
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
 
 @section('scripts_importados')
 

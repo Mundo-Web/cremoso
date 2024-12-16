@@ -51,35 +51,39 @@
 
 
         <section class="px-[5%] pt-12 xl:pt-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div>
-                    <input type="text" class="text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b 
-                    border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Nombre completo"/>
-                </div>
+            <form id="formContactos">
+             @csrf
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div>
+                        <input name="full_name" id="fullNameContacto" type="text" class="text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b 
+                        border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Nombre completo"/>
+                    </div>
 
-                <div>
-                    <input type="text" class="text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b 
-                    border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Correo electrónico"/>
-                </div>
+                    <div>
+                        <input name="email" id="emailContacto" type="text" class="text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b 
+                        border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Correo electrónico"/>
+                    </div>
 
-                <div>
-                    <input type="text" class="text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b 
-                    border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Número de teléfono (opcional)"/>
-                </div>
+                    <div>
+                        <input type="tel" name="phone" id="telefonoContacto" maxlength="12" class="text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b 
+                        border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Número de teléfono (opcional)"/>
+                    </div>
 
-                <div class="md:col-span-3">
-                    <textarea class=" text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Ingresa tu mensaje">
+                    <div class="md:col-span-3">
+                        <textarea name="message" id="message" cols="30" rows="3" placeholder="ingresa el mensaje"
+                         class=" text-[#052F4E] font-galano_regular font-semibold text-base focus:ring-0 focus:border-b border-x-0 border-t-0 border-b border-[#052F4E] w-full" placeholder="Ingresa tu mensaje">
 
-                    </textarea>
-                </div>
+                        </textarea>
+                    </div>
 
-                <div class="flex flex-row justify-start items-start">
-                    <a href="#"
-                        class="text-white py-3 px-6 bg-[#052F4E] rounded-xl text-base font-galano_light font-semibold text-left">
-                        Déjanos un mensaje
-                    </a>
+                    <div class="flex flex-row justify-start items-start">
+                        <a href="#" 
+                            class="text-white py-3 px-6 bg-[#052F4E] rounded-xl text-base font-galano_light font-semibold text-left">
+                            Déjanos un mensaje
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </form>
         </section>
 
 
@@ -160,7 +164,7 @@
 
                             <div class="flex flex-col justify-start gap-1" data-aos="fade-up" data-aos-duration="150">
                                 <label for="telf" class="text-[#082252] font-roboto font-normal text-text14">Teléfono</label>
-                                <input type="tel" name="phone" id="telefonoContacto" placeholder="Teléfono" maxlength="12" required
+                                <input type="tel" name="phone" id="telefonoContacto" maxlength="12" placeholder="Teléfono"  required
                                     class="font-roboto font-normal text-text16 placeholder:text-[#082252] placeholder:font-medium py-3 px-5 w-full bg-white border border-[#E6E4E5] focus:outline-0 focus:ring-0 transition-all text-[#082252] placeholder:text-opacity-40 focus:border-[#E6E4E5] rounded-xl">
                             </div>
 

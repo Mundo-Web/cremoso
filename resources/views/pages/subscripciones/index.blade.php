@@ -14,7 +14,7 @@
           <table id="tabladatos" class="display text-lg" style="width:100%">
             <thead>
               <tr>
-                <th>Nombre</th>
+               
                 <th>Correo</th>
               </tr>
             </thead>
@@ -22,10 +22,10 @@
 
               @foreach ($subscripciones as $item)
                 <tr>
-                  <td>
+                  {{-- <td>
                     {{ $item->nombre }}
 
-                  </td>
+                  </td> --}}
                   <td>{{ $item->email }}</td>
                   {{-- <td>{{ $item->phone }}</td> --}}
                   {{-- <td>
@@ -43,7 +43,7 @@
             </tbody>
             <tfoot>
               <tr>
-                <th>Nombre</th>
+                {{-- <th>Nombre</th> --}}
                 <th>Correo</th>
               </tr>
             </tfoot>

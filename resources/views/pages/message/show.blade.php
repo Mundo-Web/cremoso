@@ -9,20 +9,80 @@
         
                 <div class="p-6">
                     
-                    <p class="font-bold">Correo:</p>
-                    <p> {{ $message->email }} </p>
-                    <br>
-                    <p class="font-bold">Teléfono:</p>
-                    <p> {{ $message->phone }} </p>
-                    <br>
-                    <p class="font-bold">Mensaje:</p>
-                    <p class="mb-5">
-                        {{ $message->message }}
-                    </p>
+                    <table id="tabladatos" class="display text-lg" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>IP</th>
+                                <th>Dispositivo</th>
+                                <th>Latitud</th>
+                                <th>Longitud</th>
+                                <th>Sistema</th>
+                                <th>Fuente</th>
+                                <th>Enviado</th> 
+                                <th class="w-32">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                    <a href="{{route('mensajes.index')}}" class="bg-blue-500 px-4 py-2 rounded text-white"><span><i class="fa-solid fa-arrow-left mr-2"></i></span> Volver</a>
+                            @foreach ($mensajes as $item)
+                                <tr>
+                                    <td>
+                                        @if ($item->is_read == '0')
+                                            <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
+                                                        class="fa-regular fa-envelope"></i></span><span
+                                                    class="font-bold dark:text-white">{{ $item->full_name }}</span></a>
+                                        @else
+                                            <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
+                                                        class="fa-regular fa-envelope-open"></i></span><span>{{ $item->full_name }}</span></a>
+                                        @endif
+
+                                    </td>
+                                    <td>{{ $item->email }}</td>
+                                    <td>{{ $item->phone }}</td>
+
+                                    <td>{{ $item->ip }}</td>
+                                    <td>{{ $item->device }}</td>
+                                    <td>{{ $item->client_latitude }}</td>
+                                    <td>{{ $item->client_longitude }}</td>
+                                    <td>{{ $item->client_system }}</td>
+                                    <td>{{ $item->source }}</td>
+                                    <td>{{ $item->created_at->format('d-m-Y') }}</td>
+                                    
+                                    <td class="flex flex-row items-center justify-center">
+                                        <button method="POST" onclick="borrarmensaje({{ $item->id }})"
+                                            class="bg-red-600 p-2 rounded text-white"><i
+                                                class="fa-regular fa-trash-can"></i></button>
+                                        <!--a href="" class="bg-yellow-400 p-2 rounded text-white mr-6"><i class="fa-regular fa-pen-to-square"></i></a-->
+                                    </td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>IP</th>
+                                <th>Dispositivo</th>
+                                <th>Latitud</th>
+                                <th>Longitud</th>
+                                <th>Sistema</th>
+                                <th>Fuente</th>
+                                <th>Enviado</th>
+                                <th>Acciones</th>
+                                
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    
         
                 </div>
+                <a href="{{route('mensajes.index')}}" class="bg-blue-500 px-4 py-2 rounded text-white"><span><i class="fa-solid fa-arrow-left mr-2"></i></span> Volver</a>
             </div>
         </div>   
 

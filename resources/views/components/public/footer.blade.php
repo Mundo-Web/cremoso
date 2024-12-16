@@ -24,7 +24,7 @@
                    ENLACES
                 </p>
                 <div class="flex flex-col gap-3 text-[#FFF9F1] font-galano_regular text-sm">
-                    <a href="{{ route('index', 0) }}">Inicio</a>
+                    <a href="{{ route('index') }}">Inicio</a>
                     <a href="{{route('index').'#servicios'}}">Servicios</a>
                     <a href="{{route('index').'#about'}}">Nosotros</a>
                     <a href="{{route('index').'#contacto'}}">Contacto</a>
